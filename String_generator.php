@@ -13,14 +13,13 @@
 class String_generator
 {
     /**
-     * This function will replace all non-alphanumeric characters into dot(.)
-     * or you can change it with other character
+     * This function will replace all non-alphanumeric with dot(.) (default)
      *
      * @param $input
      * @return mixed
      */
-    public function replaceNonAlphaNumericChars($input)
+    public function replaceNonAlphaNumericChars($input, $replacement = '.')
     {
-        return preg_replace("/[^A-Za-z0-9]/", '.', $input);
+        return preg_replace("/[^A-Za-z0-9]/", $replacement, $input);
     }
 }
